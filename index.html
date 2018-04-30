@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>How are you?</title>
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  </head>
+  <body>
+    <div class="everything">
+
+      <div id="container">
+        <h1 class="na">What's your name?</h1>
+        <input type="text" id="name" value="" placeholder="Enter your name...">
+        <button id="myButton" onclick="answer()"><i class="right"></i></button>
+      </div>
+
+      <div class="avatargrp">
+          <img class="avatars" id="first" src="Images/avatarcircle-01.png" onclick="avclone()">
+
+          <img class="avatars" id="second" src="Images/avatarcircle-02.png" onclick="avcltwo()">
+
+          <img class="avatars" id="third" src="Images/avatarcircle-03.png" onclick="avclthree()">
+
+          <img class="avatars" id="fourth" src="Images/avatarcircle-04.png" onclick="avclfour()">
+      </div>
+
+      <div class="avatarg">
+        <img class="avatar" id="firsta" src="Images/avatar-01.png" onclick="avclone()">
+
+        <img class="avatar" id="seconda" src="Images/avatar-02.png" onclick="avcltwo()">
+
+        <img class="avatar" id="thirda" src="Images/avatar-03.png" onclick="avclthree()">
+
+
+        <img class="avatar" id="fourtha" src="Images/avatar-04.png" onclick="avclfour()">
+      </div>
+
+        <svg id="Smiles" x="0px" y="0px" width="50px" height="50px" viewBox="0 0 50 50" enable-background="new 0 0 50 50" xml:space="preserve"></svg>
+
+      	<input type="range" min="1" max="100" step="1" value="50" class="slider"/>
+
+        <path id="mouth-scared" d="M275,220a18.7,18.7,0,0,1,35.9.1" fill="none" stroke="#543093" stroke-linecap="round" stroke-miterlimit="10" stroke-width="5"/>
+    </div>
+  </body>
+  <script src="anime.min.js"></script>
+  <script src="main.js"></script>
+</html>
