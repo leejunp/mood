@@ -3,6 +3,7 @@
   <head>
     <title>How are you?</title>
     <link rel="stylesheet" type="text/css" href="mystyle.css">
+    <link rel="stylesheet" type="text/css" href="style-responsive.css">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   </head>
   <body>
@@ -25,21 +26,127 @@
       </div>
 
       <div class="avatarg">
-        <img class="avatar" id="firsta" src="Images/avatar-01.png" onclick="avclone()">
+        <img class="avatar" id="firstz" src="Images/av-01.png" onclick="avclone()">
+        <img class="avatar" id="secondz" src="Images/av-02.png" onclick="avcltwo()">
+        <img class="avatar" id="thirdz" src="Images/av-03.png" onclick="avclthree()">
+        <img class="avatar" id="fourthz" src="Images/av-04.png" onclick="avclfour()">
 
-        <img class="avatar" id="seconda" src="Images/avatar-02.png" onclick="avcltwo()">
+        <img class="avatarm" id="firste" src="Images/avelated-01.png">
+        <img class="avatarm" id="seconde" src="Images/avelated-02.png">
+        <img class="avatarm" id="thirde" src="Images/avelated-03.png">
+        <img class="avatarm" id="fourthe" src="Images/avelated-04.png">
 
-        <img class="avatar" id="thirda" src="Images/avatar-03.png" onclick="avclthree()">
+        <img class="avatarm" id="firsth" src="Images/avhappy-01.png">
+        <img class="avatarm" id="secondh" src="Images/avhappy-02.png">
+        <img class="avatarm" id="thirdh" src="Images/avhappy-03.png">
+        <img class="avatarm" id="fourthh" src="Images/avhappy-04.png">
 
+        <img class="avatarm" id="firsto" src="Images/avokay-01.png">
+        <img class="avatarm" id="secondo" src="Images/avokay-02.png">
+        <img class="avatarm" id="thirdo" src="Images/avokay-03.png">
+        <img class="avatarm" id="fourtho" src="Images/avokay-04.png">
 
-        <img class="avatar" id="fourtha" src="Images/avatar-04.png" onclick="avclfour()">
+        <img class="avatarm" id="firsts" src="Images/avsad-01.png">
+        <img class="avatarm" id="seconds" src="Images/avsad-02.png">
+        <img class="avatarm" id="thirds" src="Images/avsad-03.png">
+        <img class="avatarm" id="fourths" src="Images/avsad-04.png">
+
+        <img class="avatarm" id="firsta" src="Images/avangry-01.png">
+        <img class="avatarm" id="seconda" src="Images/avangry-02.png">
+        <img class="avatarm" id="thirda" src="Images/avangry-03.png">
+        <img class="avatarm" id="fourtha" src="Images/avangry-04.png">
       </div>
 
-        <svg id="Smiles" x="0px" y="0px" width="50px" height="50px" viewBox="0 0 50 50" enable-background="new 0 0 50 50" xml:space="preserve"></svg>
+      <div class="mood01">
+        <button class="elated" onclick="el01()">ELATED</button>
+        <button class="happy" onclick="ha01()">HAPPY</button>
+        <button class="okay" onclick="ok01()">OKAY</button>
+        <button class="sad" onclick="sa01()">SAD</button>
+        <button class="angry" onclick="an01()">ANGRY</button>
+      </div>
+      <div class="mood02">
+        <button class="elated" onclick="el02()">ELATED</button>
+        <button class="happy" onclick="ha02()">HAPPY</button>
+        <button class="okay" onclick="ok02()">OKAY</button>
+        <button class="sad" onclick="sa02()">SAD</button>
+        <button class="angry" onclick="an02()">ANGRY</button>
+      </div>
+      <div class="mood03">
+        <button class="elated" onclick="el03()">ELATED</button>
+        <button class="happy" onclick="ha03()">HAPPY</button>
+        <button class="okay" onclick="ok03()">OKAY</button>
+        <button class="sad" onclick="sa03()">SAD</button>
+        <button class="angry" onclick="an03()">ANGRY</button>
+      </div>
 
-      	<input type="range" min="1" max="100" step="1" value="50" class="slider"/>
 
-        <path id="mouth-scared" d="M275,220a18.7,18.7,0,0,1,35.9.1" fill="none" stroke="#543093" stroke-linecap="round" stroke-miterlimit="10" stroke-width="5"/>
+      <div class="mood001">
+        <button class="elated" onclick="el04()">ELATED</button>
+        <button class="happy" onclick="ha04()">HAPPY</button>
+        <button class="okay" onclick="ok04()">OKAY</button>
+        <button class="sad" onclick="sa04()">SAD</button>
+        <button class="angry" onclick="an04()">ANGRY</button>
+      </div>
+      <div class="mood002">
+        <button class="elated" onclick="el05()">ELATED</button>
+        <button class="happy" onclick="ha05()">HAPPY</button>
+        <button class="okay" onclick="ok05()">OKAY</button>
+        <button class="sad" onclick="sa05()">SAD</button>
+        <button class="angry" onclick="an05()">ANGRY</button>
+      </div>
+      <div class="mood003">
+        <button class="elated" onclick="el06()">ELATED</button>
+        <button class="happy" onclick="ha06()">HAPPY</button>
+        <button class="okay" onclick="ok06()">OKAY</button>
+        <button class="sad" onclick="sa06()">SAD</button>
+        <button class="angry" onclick="an06()">ANGRY</button>
+      </div>
+
+
+      <div class="mood0001">
+        <button class="elated" onclick="el07()">ELATED</button>
+        <button class="happy" onclick="ha07()">HAPPY</button>
+        <button class="okay" onclick="ok07()">OKAY</button>
+        <button class="sad" onclick="sa07()">SAD</button>
+        <button class="angry" onclick="an07()">ANGRY</button>
+      </div>
+      <div class="mood0002">
+        <button class="elated" onclick="el08()">ELATED</button>
+        <button class="happy" onclick="ha08()">HAPPY</button>
+        <button class="okay" onclick="ok08()">OKAY</button>
+        <button class="sad" onclick="sa08()">SAD</button>
+        <button class="angry" onclick="an08()">ANGRY</button>
+      </div>
+      <div class="mood0003">
+        <button class="elated" onclick="el09()">ELATED</button>
+        <button class="happy" onclick="ha09()">HAPPY</button>
+        <button class="okay" onclick="ok09()">OKAY</button>
+        <button class="sad" onclick="sa09()">SAD</button>
+        <button class="angry" onclick="an09()">ANGRY</button>
+      </div>
+
+
+      <div class="mood00001">
+        <button class="elated" onclick="el010()">ELATED</button>
+        <button class="happy" onclick="ha010()">HAPPY</button>
+        <button class="okay" onclick="ok010()">OKAY</button>
+        <button class="sad" onclick="sa010()">SAD</button>
+        <button class="angry" onclick="an010()">ANGRY</button>
+      </div>
+      <div class="mood00002">
+        <button class="elated" onclick="el011()">ELATED</button>
+        <button class="happy" onclick="ha011()">HAPPY</button>
+        <button class="okay" onclick="ok011()">OKAY</button>
+        <button class="sad" onclick="sa011()">SAD</button>
+        <button class="angry" onclick="an011()">ANGRY</button>
+      </div>
+      <div class="mood00003">
+        <button class="elated" onclick="el012()">ELATED</button>
+        <button class="happy" onclick="ha012()">HAPPY</button>
+        <button class="okay" onclick="ok012()">OKAY</button>
+        <button class="sad" onclick="sa012()">SAD</button>
+        <button class="angry" onclick="an012()">ANGRY</button>
+      </div>
     </div>
   </body>
   <script src="anime.min.js"></script>
