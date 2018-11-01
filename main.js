@@ -1,7 +1,47 @@
 var output = $('.na');
 var input = $('#name').val();
 
+var cookie = Cookies.get('id');
+var cookieJson = Cookies.getJSON('id');
+
+var cookietwo = Cookies.get('idtwo');
+var cookieJsontwo = Cookies.getJSON('idtwo');
+var allChoices = [];
+
+if (cookie) {
+  $('#name').val(cookieJson.name)
+  $('#name').hide();
+  $('#myButton').hide();
+  if (!cookieJson.pickedAvatar) {
+	  output.html('Hello ' + $('#name').val() + '! Choose your avatar:');
+	  $('.avatars').show();
+
+	  anime({
+		targets: '.avatars',
+		translateY: '-900px',
+		scale: [.75, .9],
+		delay: function(el, index) {
+		 return index * 80;
+		},
+	  });
+  } else {
+	  var pickedAvatar = cookieJson.avatar;
+	  console.log(pickedAvatar);
+	  console.log(cookieJson);
+	  if (pickedAvatar === '1') {
+		  avclone();
+	  } else if (pickedAvatar === '2') {
+		  avcltwo();
+	  } else if (pickedAvatar === '3') {
+		  avclthree();
+	  } else {
+		  avclfour();
+	  }
+  }
+}
+
 function answer() {
+  Cookies.set('id', { name: $('#name').val(), pickedAvatar: false });
   output.html('Hello ' + $('#name').val() + '! Choose your avatar:');
   $('#name').fadeOut(200);
   $('#myButton').fadeOut(200);
@@ -9,7 +49,7 @@ function answer() {
 
   anime({
     targets: '.avatars',
-    translateY: '-36rem',
+    translateY: '-1000px',
     scale: [.75, .9],
     delay: function(el, index) {
      return index * 80;
@@ -19,9 +59,11 @@ function answer() {
 
 function avclone(){
   output.html('So ' + $('#name').val() + ', tell me how you felt today morning.');
+  Cookies.set('id', { name: $('#name').val(), pickedAvatar: true, avatar: '1' });
+  console.log(Cookies.get('id'));
   anime({
     targets: '.avatars',
-    translateY: '36rem',
+    translateY: '1000px',
     scale: [.75, .9],
     delay: function(el, index) {
      return index * 80;
@@ -410,6 +452,7 @@ function an03(){
 
 function avcltwo(){
   output.html('So ' + $('#name').val() + ', tell me how you felt today morning.');
+  Cookies.set('id', { name: $('#name').val(), pickedAvatar: true, avatar: '2' });
   anime({
     targets: '.avatars',
     translateY: '36rem',
@@ -800,11 +843,14 @@ function an06(){
 
 //Avatar 3
 
+var day = 0;
+
 function avclthree(){
   output.html('So ' + $('#name').val() + ', tell me how you felt today morning.');
+  Cookies.set('id', { name: $('#name').val(), pickedAvatar: true, avatar: '3' });
   anime({
     targets: '.avatars',
-    translateY: '36rem',
+    translateY: '1000px',
     scale: [.75, .9],
     delay: function(el, index) {
      return index * 80;
@@ -818,7 +864,7 @@ function avclthree(){
 
   anime({
     targets: '#thirdz',
-    translateY: '-40rem',
+    translateY: '-850px',
     delay: function(el, index) {
      return index * 80;
     },
@@ -843,6 +889,12 @@ function el07(){
   info.push(moodo);
   output.html('How about noon?');
 
+
+  allChoices.push('Morning: Elated');
+  Cookies.set('choice', allChoices, {expires: 31});
+
+  console.log(Cookies.get('choice'));
+
   $('.mood0001').hide();
   $('.mood0002').show();
 };
@@ -861,6 +913,10 @@ function ha07(){
 
   info.push(moodo);
   output.html('How about noon?');
+
+    allChoices.push('Morning: Happy');
+    Cookies.set('choice', allChoices, {expires: 31});
+    console.log(Cookies.get('choice'));
 
   $('.mood0001').hide();
   $('.mood0002').show();
@@ -881,6 +937,11 @@ function ok07(){
   info.push(moodo);
   output.html('How about noon?');
 
+
+    allChoices.push('Morning: Okay');
+    Cookies.set('choice', allChoices, {expires: 31});
+    console.log(Cookies.get('choice'));
+
   $('.mood0001').hide();
   $('.mood0002').show();
 };
@@ -900,6 +961,10 @@ function sa07(){
   info.push(moodo);
   output.html('How about noon?');
 
+    allChoices.push('Morning: Sad');
+    Cookies.set('choice', allChoices, {expires: 31});
+    console.log(Cookies.get('choice'));
+
   $('.mood0001').hide();
   $('.mood0002').show();
 };
@@ -918,6 +983,10 @@ function an07(){
 
   info.push(moodo);
   output.html('How about noon?');
+
+    allChoices.push('Morning: Angry');
+    Cookies.set('choice', allChoices, {expires: 31});
+    console.log(Cookies.get('choice'));
 
   $('.mood0001').hide();
   $('.mood0002').show();
@@ -941,6 +1010,10 @@ function el08(){
   $('.mood0001').hide();
   $('.mood0002').hide();
   $('.mood0003').show();
+
+  allChoices.push('Noon: Elated');
+  Cookies.set('choice', allChoices, {expires: 31});
+  console.log(Cookies.get('choice'));
 };
 
 function ha08(){
@@ -957,6 +1030,10 @@ function ha08(){
 
   info.push(moodo);
   output.html('How about now?');
+
+  allChoices.push('Noon: Happy');
+  Cookies.set('choice', allChoices, {expires: 31});
+  console.log(Cookies.get('choice'));
 
   $('.mood0001').hide();
   $('.mood0002').hide();
@@ -978,6 +1055,10 @@ function ok08(){
   info.push(moodo);
   output.html('How about now?');
 
+  allChoices.push('Noon: Okay');
+  Cookies.set('choice', allChoices, {expires: 31});
+  console.log(Cookies.get('choice'));
+
   $('.mood0001').hide();
   $('.mood0002').hide();
   $('.mood0003').show();
@@ -998,6 +1079,10 @@ function sa08(){
   info.push(moodo);
   output.html('How about now?');
 
+  allChoices.push('Noon: Sad');
+  Cookies.set('choice', allChoices, {expires: 31});
+  console.log(Cookies.get('choice'));
+
   $('.mood0001').hide();
   $('.mood0002').hide();
   $('.mood0003').show();
@@ -1017,6 +1102,10 @@ function an08(){
 
   info.push(moodo);
   output.html('How about now?');
+
+  allChoices.push('Noon: Angry');
+  Cookies.set('choice', allChoices, {expires: 31});
+  console.log(Cookies.get('choice'));
 
   $('.mood0001').hide();
   $('.mood0002').hide();
@@ -1041,6 +1130,12 @@ function el09(){
   $('.mood0001').hide();
   $('.mood0002').hide();
   $('.mood0003').fadeOut(600);
+
+
+
+  allChoices.push('Night: Elated');
+  Cookies.set('choice', allChoices, {expires: 31});
+  console.log(Cookies.get('choice'));
 
   if(jQuery.inArray("happy", info[3]) !== -1){
     output.html('Hey! A happy day. Try writing down what made you happy.');
@@ -1076,6 +1171,12 @@ function ha09(){
   $('.mood0002').hide();
   $('.mood0003').fadeOut(600);
 
+
+
+  allChoices.push('Night: Happy');
+  Cookies.set('choice', allChoices, {expires: 31});
+  console.log(Cookies.get('choice'));
+
   if(jQuery.inArray("elated", info[3]) !== -1){
     output.html('Hey! A happy day. Try writing down what made you happy.');
 
@@ -1105,9 +1206,15 @@ function ok09(){
   info.push(moodo);
   output.html('How about now?');
 
+  allChoices.push('Night:Okay');
+  Cookies.set('choice', allChoices, {expires: 31});
+  console.log(Cookies.get('choice'));
+
   $('.mood0001').hide();
   $('.mood0002').hide();
   $('.mood0003').fadeOut(600);
+
+
 
   if(jQuery.inArray("happy", info) !== -1){
     output.html('Try to write down what made you less happy.');
@@ -1138,9 +1245,15 @@ function sa09(){
   info.push(moodo);
   output.html('How about now?');
 
+  allChoices.push('Night: Sad');
+  Cookies.set('choice', allChoices, {expires: 31});
+  console.log(Cookies.get('choice'));
+
   $('.mood0001').hide();
   $('.mood0002').hide();
   $('.mood0003').fadeOut(600);
+
+
 
   if(jQuery.inArray("happy", info) !== -1){
     output.html('Oh no! Write down what made you sad today.');
@@ -1171,9 +1284,15 @@ function an09(){
   info.push(moodo);
   output.html('How about now?');
 
+  allChoices.push('Night: Angry');
+  Cookies.set('choice', allChoices);
+  console.log(Cookies.get('choice'));
+
   $('.mood0001').hide();
   $('.mood0002').hide();
   $('.mood0003').fadeOut(600);
+
+
 
   if(jQuery.inArray("happy", info) !== -1){
     output.html('Try to meditate. What made you happy today?');
@@ -1189,10 +1308,19 @@ function an09(){
 }
 };
 
+console.log(Cookies.get('choice'));
+
+for(var i=0; i < allChoices.length; i++){
+  $('#allcho').html = allChoices[i];
+}
+
+
+
 //Avatar 4
 
 function avclfour(){
   output.html('So ' + $('#name').val() + ', tell me how you felt today morning.');
+  Cookies.set('id', { name: $('#name').val(), pickedAvatar: true, avatar: '4' });
   anime({
     targets: '.avatars',
     translateY: '36rem',

@@ -38,7 +38,7 @@ h1{
   height:20%;
   margin: auto;
   position: relative;
-  bottom:-40vw;
+  bottom:-1000px;
 }
 
 #name{
@@ -83,7 +83,7 @@ i {
 .avatar{
   width:45vw;
   left:27%;
-  bottom:-50rem;
+  bottom:-1000px;
   position:absolute;
   display: none;
 }
