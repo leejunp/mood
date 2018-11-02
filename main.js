@@ -3,6 +3,8 @@ var input = $('#name').val();
 
 var cookie = Cookies.get('id');
 var cookieJson = Cookies.getJSON('id');
+var emotions =['firstz', 'firste','firsth', 'firsto', 'firsts', 'frista'];
+
 if (cookie) {
   $('#name').val(cookieJson.name)
   $('#name').hide();
