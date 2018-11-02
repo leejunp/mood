@@ -253,7 +253,7 @@ function an02(){
 function el03(){
 
   var cookieJson = Cookies.getJSON('id');
-  Cookies.set('id', { name: $('#name').val(), pickedAvatar: true, avatar: '1', e: cookieJson.e + 1, h: cookieJson.h, o: cookieJson.o, s: cookieJson.s, a: cookieJson.a, lockout: date.getTime() + /*86400000*/180000 });
+  Cookies.set('id', { name: $('#name').val(), pickedAvatar: true, avatar: '1', e: cookieJson.e + 1, h: cookieJson.h, o: cookieJson.o, s: cookieJson.s, a: cookieJson.a, lockout: date.getTime() + /*86400000*/60000 });
   $('#firstz').hide();
   $('#firste').show();
   $('#firsth').hide();
@@ -272,7 +272,7 @@ function el03(){
 
 function ha03(){
   var cookieJson = Cookies.getJSON('id');
-  Cookies.set('id', { name: $('#name').val(), pickedAvatar: true, avatar: '1', e: cookieJson.e, h: cookieJson.h + 1, o: cookieJson.o, s: cookieJson.s, a: cookieJson.a, lockout: date.getTime() + /*86400000*/180000 });
+  Cookies.set('id', { name: $('#name').val(), pickedAvatar: true, avatar: '1', e: cookieJson.e, h: cookieJson.h + 1, o: cookieJson.o, s: cookieJson.s, a: cookieJson.a, lockout: date.getTime() + /*86400000*/60000 });
   $('#firstz').hide();
   $('#firste').hide();
   $('#firsth').show();
@@ -290,7 +290,7 @@ function ha03(){
 
 function ok03(){
   var cookieJson = Cookies.getJSON('id');
-  Cookies.set('id', { name: $('#name').val(), pickedAvatar: true, avatar: '1', e: cookieJson.e, h: cookieJson.h, o: cookieJson.o + 1, s: cookieJson.s, a: cookieJson.a, lockout: date.getTime() + /*86400000*/180000 });
+  Cookies.set('id', { name: $('#name').val(), pickedAvatar: true, avatar: '1', e: cookieJson.e, h: cookieJson.h, o: cookieJson.o + 1, s: cookieJson.s, a: cookieJson.a, lockout: date.getTime() + /*86400000*/60000 });
   $('#firstz').hide();
   $('#firste').hide();
   $('#firsth').hide();
@@ -308,7 +308,7 @@ function ok03(){
 
 function sa03(){
   var cookieJson = Cookies.getJSON('id');
-  Cookies.set('id', { name: $('#name').val(), pickedAvatar: true, avatar: '1', e: cookieJson.e, h: cookieJson.h, o: cookieJson.o, s: cookieJson.s + 1, a: cookieJson.a, lockout: date.getTime() + /*86400000*/180000 });
+  Cookies.set('id', { name: $('#name').val(), pickedAvatar: true, avatar: '1', e: cookieJson.e, h: cookieJson.h, o: cookieJson.o, s: cookieJson.s + 1, a: cookieJson.a, lockout: date.getTime() + /*86400000*/60000 });
   $('#firstz').hide();
   $('#firste').hide();
   $('#firsth').hide();
@@ -326,7 +326,7 @@ function sa03(){
 
 function an03(){
   var cookieJson = Cookies.getJSON('id');
-  Cookies.set('id', { name: $('#name').val(), pickedAvatar: true, avatar: '1', e: cookieJson.e, h: cookieJson.h, o: cookieJson.o, s: cookieJson.s, a: cookieJson.a + 1, lockout: date.getTime() + /*86400000*/180000 });
+  Cookies.set('id', { name: $('#name').val(), pickedAvatar: true, avatar: '1', e: cookieJson.e, h: cookieJson.h, o: cookieJson.o, s: cookieJson.s, a: cookieJson.a + 1, lockout: date.getTime() + /*86400000*/60000 });
   $('#firstz').hide();
   $('#firste').hide();
   $('#firsth').hide();
