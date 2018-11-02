@@ -64,7 +64,7 @@ function avclone(){
   Cookies.set('id', { name: $('#name').val(), pickedAvatar: true, avatar: '1', e: cookieJson.e, h: cookieJson.h, o: cookieJson.o, s: cookieJson.s, a: cookieJson.a });
   anime({
     targets: '.avatars',
-    translateY: '850px',
+    translateY: '750px',
     scale: [.75, .9],
     delay: function(el, index) {
      return index * 80;
@@ -78,7 +78,7 @@ function avclone(){
 
   anime({
     targets: '#firstz',
-    translateY: '-850px',
+    translateY: '-750px',
     delay: function(el, index) {
      return index * 80;
     },
