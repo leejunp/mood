@@ -78,7 +78,7 @@ function avclone(){
 
   anime({
     targets: '#firstz',
-    translateY: '-750px',
+    translateY: '-850px',
     delay: function(el, index) {
      return index * 80;
     },
