@@ -1,4 +1,4 @@
-@media (min-width: 737px) and (max-width: 1920px) {
+@media (min-width: 737px) and (max-width: 1820px) {
 
 body{
   font-family: helvetica;
@@ -83,7 +83,7 @@ i {
 }
 
 .avatar{
-  width:35vw;
+  width:45vw;
   left:27%;
   bottom:-1000px;
   position:absolute;
@@ -91,7 +91,7 @@ i {
 }
 
 .avatarm{
-  width:35vw;
+  width:45vw;
   left:27%;
   bottom:-10rem;
   position:absolute;
