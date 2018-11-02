@@ -1,4 +1,5 @@
 var output = $('.na');
+var outputtwo = $('.nap');
 var input = $('#name').val();
 
 var cookie = Cookies.get('id');
@@ -37,7 +38,10 @@ if (cookie) {
 	  $('.mood02').hide();
 	  $('.mood03').hide();
 
-	  output.html('You have responded elated ' + cookieJson.e + ' times, happy ' + cookieJson.h + ' times, okay ' + cookieJson.o + ' times, sad ' + cookieJson.s + ' times, and angry ' + cookieJson.a + ' times since starting your journal. Please come back later to write a new entry!');
+    output.css("margin-top", "5%");
+    output.css("font-size", "1.5vw");
+
+	  output.html('Here is your overview ' + $('#name').val() + '</br></br><img class="ic" src="Images/avelated-01.png"> ' + cookieJson.e + ' times </br> <img class="ic" src="Images/avhappy-01.png"> ' + cookieJson.h + ' times </br> <img class="ic" src="Images/avokay-01.png"> ' + cookieJson.o + ' times </br> <img class="ic" src="Images/avsad-01.png"> ' + cookieJson.s + ' times </br> <img class="ic" src="Images/avangry-01.png"> ' + cookieJson.a + ' times </br></br> Please come back later to write a new entry!');
   }
 }
 
@@ -261,7 +265,10 @@ function el03(){
   $('#firsts').hide();
   $('#firsta').hide();
 
-  output.html('You have responded elated ' + (cookieJson.e + 1) + ' times, happy ' + cookieJson.h + ' times, okay ' + cookieJson.o + ' times, sad ' + cookieJson.s + ' times, and angry ' + cookieJson.a + ' times since starting your journal. Please come back later to write a new entry!');
+  output.css("margin-top", "5%");
+  output.css("font-size", "1.5vw");
+
+  output.html('Here is your overview ' + $('#name').val() + '</br></br><img class="ic" src="Images/avelated-01.png"> ' + (cookieJson.e + 1) + ' times </br> <img class="ic" src="Images/avhappy-01.png"> ' + cookieJson.h + ' times </br> <img class="ic" src="Images/avokay-01.png"> ' + cookieJson.o + ' times </br> <img class="ic" src="Images/avsad-01.png"> ' + cookieJson.s + ' times </br> <img class="ic" src="Images/avangry-01.png"> ' + cookieJson.a + ' times </br></br> Please come back later to write a new entry!');
 
   $('.mood01').hide();
   $('.mood02').hide();
@@ -280,7 +287,10 @@ function ha03(){
   $('#firsts').hide();
   $('#firsta').hide();
 
-  output.html('You have responded elated ' + cookieJson.e + ' times, happy ' + (cookieJson.h + 1) + ' times, okay ' + cookieJson.o + ' times, sad ' + cookieJson.s + ' times, and angry ' + cookieJson.a + ' times since starting your journal. Please come back later to write a new entry!');
+  output.css("margin-top", "5%");
+  output.css("font-size", "1.5vw");
+
+  output.html('Here is your overview ' + $('#name').val() + '</br></br><img class="ic" src="Images/avelated-01.png"> ' + cookieJson.e + ' times </br> <img class="ic" src="Images/avhappy-01.png"> ' + (cookieJson.h +1) + ' times </br> <img class="ic" src="Images/avokay-01.png"> ' + cookieJson.o + ' times </br> <img class="ic" src="Images/avsad-01.png"> ' + cookieJson.s + ' times </br> <img class="ic" src="Images/avangry-01.png"> ' + cookieJson.a + ' times </br></br> Please come back later to write a new entry!');
 
   $('.mood01').hide();
   $('.mood02').hide();
@@ -298,7 +308,10 @@ function ok03(){
   $('#firsts').hide();
   $('#firsta').hide();
 
-  output.html('You have responded elated ' + cookieJson.e + ' times, happy ' + cookieJson.h + ' times, okay ' + (cookieJson.o + 1) + ' times, sad ' + cookieJson.s + ' times, and angry ' + cookieJson.a + ' times since starting your journal. Please come back later to write a new entry!');
+  output.css("margin-top", "5%");
+  output.css("font-size", "1.5vw");
+
+  output.html('Here is your overview ' + $('#name').val() + '</br></br><img class="ic" src="Images/avelated-01.png"> ' + cookieJson.e + ' times </br> <img class="ic" src="Images/avhappy-01.png"> ' + cookieJson.h + ' times </br> <img class="ic" src="Images/avokay-01.png"> ' + (cookieJson.o + 1) + ' times </br> <img class="ic" src="Images/avsad-01.png"> ' + cookieJson.s + ' times </br> <img class="ic" src="Images/avangry-01.png"> ' + cookieJson.a  + ' times </br></br> Please come back later to write a new entry!');
 
   $('.mood01').hide();
   $('.mood02').hide();
@@ -316,7 +329,10 @@ function sa03(){
   $('#firsts').show();
   $('#firsta').hide();
 
-  output.html('You have responded elated ' + cookieJson.e + ' times, happy ' + cookieJson.h + ' times, okay ' + cookieJson.o + ' times, sad ' + (cookieJson.s + 1) + ' times, and angry ' + cookieJson.a + ' times since starting your journal. Please come back later to write a new entry!');
+  output.css("margin-top", "5%");
+  output.css("font-size", "1.5vw");
+
+  output.html('Here is your overview ' + $('#name').val() + '</br></br><img class="ic" src="Images/avelated-01.png"> ' + cookieJson.e + ' times </br> <img class="ic" src="Images/avhappy-01.png"> ' + cookieJson.h + ' times </br> <img class="ic" src="Images/avokay-01.png"> ' + cookieJson.o + ' times </br> <img class="ic" src="Images/avsad-01.png"> ' + (cookieJson.s + 1) + ' times </br> <img class="ic" src="Images/avangry-01.png"> ' + cookieJson.a  + ' times </br></br> Please come back later to write a new entry!');
 
   $('.mood01').hide();
   $('.mood02').hide();
@@ -334,7 +350,10 @@ function an03(){
   $('#firsts').hide();
   $('#firsta').show();
 
-  output.html('You have responded elated ' + cookieJson.e + ' times, happy ' + cookieJson.h + ' times, okay ' + cookieJson.o + ' times, sad ' + cookieJson.s + ' times, and angry ' + (cookieJson.a + 1) + ' times since starting your journal. Please come back later to write a new entry!');
+  output.css("margin-top", "5%");
+  output.css("font-size", "1.5vw");
+
+  outputtwo.html('Here is your overview ' + $('#name').val() + '</br></br><img class="ic" src="Images/avelated-01.png"> ' + cookieJson.e + ' times </br> <img class="ic" src="Images/avhappy-01.png"> ' + cookieJson.h + ' times </br> <img class="ic" src="Images/avokay-01.png"> ' + cookieJson.o + ' times </br> <img class="ic" src="Images/avsad-01.png"> ' + cookieJson.s + ' times </br> <img class="ic" src="Images/avangry-01.png"> ' + (cookieJson.a + 1) + ' times </br></br> Please come back later to write a new entry!');
 
   $('.mood01').hide();
   $('.mood02').hide();
