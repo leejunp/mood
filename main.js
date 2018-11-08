@@ -45,6 +45,7 @@ if (cookie) {
   }
 }
 
+
 function answer() {
   Cookies.set('id', { name: $('#name').val(), pickedAvatar: false, e: 0, h: 0, o: 0, s: 0, a: 0 });
   output.html('Hello ' + $('#name').val() + '! Choose your avatar:');
